@@ -1,3 +1,113 @@
+
+
+A simple CRM built with **Laravel** featuring:
+
+* User authentication (login/signup)
+* Add projects (with name, phone, email, stage)
+* Kanban board to organize projects by stage
+* Manage stages (add/remove columns)
+
+---
+
+ Requirements
+
+Make sure you have these installed before running the project:
+
+* PHP >= 8.0
+* Composer
+* MySQL
+---
+
+ Setup Instructions
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/getinos/CRM_interview.git
+   cd CRM_interview
+   ```
+
+2. **Install PHP Dependencies**
+
+   ```bash
+   composer install
+   ```
+
+3. **Install Node Dependencies (Optional if using Laravel Mix/Vite)**
+
+   ```bash
+   npm install && npm run dev
+   ```
+
+4. **Create `.env` File**
+
+   ```bash
+   cp .env.example .env
+   ```
+
+   * Open `.env` and set your **database credentials**:
+
+     ```env
+     DB_DATABASE=interview_CRM
+     DB_USERNAME=root
+     DB_PASSWORD=
+     ```
+
+5. **Generate App Key**
+
+   ```bash
+   php artisan key:generate
+   ```
+
+6. **Run Migrations & Seed Stages**
+
+   ```bash
+   php artisan migrate --seed
+   ```
+
+7. **Start Local Server**
+
+   ```bash
+   php artisan serve
+   ```
+
+8. **Access the App**
+   Open `http://127.0.0.1:8000` in your browser.
+
+---
+
+## 📌 Default Stages
+
+The system comes with 3 default stages (seeded automatically):
+
+* Lead
+* In Progress
+* Closed
+
+---
+
+##  Test Login
+
+You can create a new account using the signup form.
+
+---
+
+## Features to Explore
+
+* Add a new project from the dashboard header
+* Drag and drop projects between stages on the Kanban board
+* Add or remove stages from the stage settings
+
+---
+
+ 
+
+
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
